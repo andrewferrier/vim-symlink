@@ -6,7 +6,7 @@ let g:symlink_loaded = 1
 let g:symlink_redraw = get(g:,'symlink_redraw', 1)
 
 function! s:on_buf_read(filepath)
-  if match(a:filepath, 'vim/pack/.*/doc/') >= 0
+  if match(a:filepath, 'vim/pack/.*/doc/') >= 0 || match(a:filepath, 'runtime/doc/') >= 0
     return
   endif
 
